@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import Card from "../card.astro";
+const bloglist = await getCollection("blogs", ({data}) => {
+return data.featured == true
+})
+
+import truncateText from "../../truncateText";
+
+
+
+---
+<div class="blog-lists min-h-[80vh] mt-20  flex flex-col">
+    <h1 class="text-4xl font-semibold text-center mb-16">Featured Blogs</h1>
+<div class="featured-blogs grid grid-cols-3 mx-10 ">
+    {
+        bloglist.map((posts) => (
+        <Card Title={posts.data.title} link={"posts" + "/" + posts.slug} img={posts.data.image} preview={truncateText(posts.body, 10)}/>
+        ))
+    }
+</div>
+  
+</div>

@@ -1,0 +1,25 @@
+---
+import ServiceCard from "../serviceCard.astro"
+
+const services = [{
+    title: 'website design',
+    description: 'I help you take your buisness online through a website '
+},
+{
+    title: 'email marketing',
+    description: 'connect with your audience through email marketing'
+},
+{
+    title: 'social media management',
+    description: 'I will upload high-quality content on your social media'
+}
+]
+---
+<div class="services mx-10 flex flex-col justify-center align-center">
+    <h1 class="text-4xl font-semibold text-center mb-16">Services I offer</h1>
+<div class="service-cards  grid grid-cols-1 gap-11 lg:grid-cols-3">
+    {services.map((service) => ( 
+        <ServiceCard title={service.title} description={service.description}/>
+    ))}
+</div>
+</div>

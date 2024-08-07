@@ -1,0 +1,23 @@
+---
+import Card from "../components/card.astro"
+import Layout from "../layouts/Layout.astro"
+
+import { getCollection } from "astro:content";
+const blogList = await getCollection('blogs')
+
+import truncateText from "../truncateText";
+---
+
+
+<Layout title="blogs">
+    <div class="blogs min-h-screen">
+        <h1 class="text-4xl font-semibold text-center mb-16">my blogs</h1>
+        <div class="blog-list grid-cols-3 mx-20 grid">
+       {
+        blogList.map((posts) => (
+            <Card Title={posts.data.title} link={"posts" + "/" + posts.slug} img={posts.data.image} preview={truncateText(posts.body, 10)}/>
+        ))
+       }
+        </div>
+    </div> 
+</Layout>

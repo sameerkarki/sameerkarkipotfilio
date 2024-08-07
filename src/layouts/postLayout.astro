@@ -1,0 +1,25 @@
+---
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+
+---
+
+<Layout title={frontmatter.title}>
+    <main class="text-left lg:w-[65%] w-[90%] m-auto flex  flex-col gap-12 mt-12">
+        <div class="top flex flex-col gap-4">
+            <p class="font-medium text-blue-500">{frontmatter.tag}</p>
+            <h2 class="text-5xl  font-medium">{frontmatter.title}</h2>
+
+            <div class="publishDetials flex gap-10 items-center justify-left">
+                <p class="pr-6 border-r-2 border-black" >{frontmatter.author}</p>
+                <p>{frontmatter.publishDate}</p>
+            </div>
+
+            <img src={frontmatter.image} alt="this is a image" width="800">
+    
+        </div>
+    <slot/>
+    </main>
+ 
+</Layout>

@@ -1,0 +1,26 @@
+---
+
+const { frontmatter } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+        <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
+
+	</head>
+	<body>
+        <div class="hero min-h-[90vh] flex flex-col justify-center">
+            <h1 class="text-4xl text-center font-semibold">{frontmatter.title}</h1>
+            <a href="" class="lemonsqueezy-button">Buy this shit</a>
+        </div>
+	</body>
+
+</html>

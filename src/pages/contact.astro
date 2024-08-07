@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+
+---
+
+<Layout title="contact me">
+    <div class="my-20 flex items-center justify-center min-h-screen">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h1 class="text-2xl font-bold mb-6 text-gray-700 text-center">Contact Me</h1>
+            <form action="https://form.taxi/s/2jrx8vpa" method="POST">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-semibold">Name</label>
+                    <input type="text" id="name" name="Name" class="mt-2 p-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-semibold">Email</label>
+                    <input type="email" name="Email" id="email" class="mt-2 p-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 font-semibold">Message</label>
+                    <textarea id="message" name="Message" rows="4" class="mt-2 p-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                </div>
+                <div class="mb-4">
+                    <button type="submit" value="Send" class="w-full bg-yellow-500 text-white py-2 rounded-lg font-semibold hover:bg-yellow-600">Submit</button>
+                </div>
+            </form>
+            <div class="mt-6 text-center">
+                <p class="text-gray-700 font-semibold mb-4">Connect with me:</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://x.com/sameer1281593" target="_blank" class="text-yellow-500 hover:text-yellow-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.56a9.83 9.83 0 01-2.82.77 4.93 4.93 0 002.17-2.71 9.72 9.72 0 01-3.1 1.19 4.92 4.92 0 00-8.39 4.48 13.94 13.94 0 01-10.1-5.13 4.92 4.92 0 001.52 6.56 4.91 4.91 0 01-2.23-.62v.06a4.92 4.92 0 003.95 4.83 4.93 4.93 0 01-2.22.08 4.93 4.93 0 004.6 3.42 9.87 9.87 0 01-6.1 2.1c-.39 0-.77-.02-1.15-.07a13.94 13.94 0 007.55 2.21c9.06 0 14.01-7.5 14.01-14.01 0-.21 0-.42-.01-.63A10.01 10.01 0 0024 4.56z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/sameer___karki/" target="_blank" class="text-yellow-500 hover:text-yellow-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163C6.503 2.163 2.163 6.503 2.163 12S6.503 21.837 12 21.837 21.837 17.497 21.837 12 17.497 2.163 12 2.163zm0 18.324c-3.622 0-6.561-2.939-6.561-6.561S8.378 7.365 12 7.365 18.561 10.304 18.561 12 15.622 20.487 12 20.487zm3.797-10.179a.96.96 0 11-1.92 0 .96.96 0 011.92 0zm-4.397 0a2.366 2.366 0 100 4.731 2.366 2.366 0 000-4.731zm0 3.841a1.475 1.475 0 110-2.95 1.475 1.475 0 010 2.95z"/>
+                        </svg>
+                    </a>
+                    </a>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
